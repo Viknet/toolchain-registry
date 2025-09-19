@@ -10,6 +10,11 @@ clangd
 clang-resource-headers
 {% endblock %}
 
+{% block cmake_flags %}
+{{super()}}
+CMAKE_CROSSCOMPILING=NO
+{% endblock %}
+
 {% block postinstall %}
 :
 {% endblock %}
