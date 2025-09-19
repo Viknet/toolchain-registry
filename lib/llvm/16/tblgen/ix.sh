@@ -7,6 +7,7 @@
 {% block llvm_projects %}
 {{super()}}
 mlir
+clang-tools-extra
 {% endblock %}
 
 {% block llvm_targets %}
