@@ -15,8 +15,9 @@ llvm-tblgen
 clang-tblgen
 mlir-tblgen
 mlir-linalg-ods-yaml-gen
+clang-tidy-confusable-chars-gen
 {% endblock %}
 
 {% block env %}
-export CMFLAGS="-DLLVM_CONFIG_PATH=${out}/bin/llvm-config -DCLANG_TABLEGEN=${out}/bin/clang-tblgen -DLLVM_TABLEGEN=${out}/bin/llvm-tblgen -DMLIR_TABLEGEN=${out}/bin/mlir-tblgen -DMLIR_LINALG_ODS_YAML_GEN=${out}/bin/mlir-linalg-ods-yaml-gen -DLLVM_USE_HOST_TOOLS=OFF \${CMFLAGS}"
+export CMFLAGS="-DLLVM_CONFIG_PATH=${out}/bin/llvm-config -DCLANG_TABLEGEN=${out}/bin/clang-tblgen -DLLVM_TABLEGEN=${out}/bin/llvm-tblgen -DMLIR_TABLEGEN=${out}/bin/mlir-tblgen -DCLANG_TIDY_CONFUSABLE_CHARS_GEN=${out}/bin/clang-tidy-confusable-chars-gen -DMLIR_LINALG_ODS_YAML_GEN=${out}/bin/mlir-linalg-ods-yaml-gen -DLLVM_USE_HOST_TOOLS=OFF \${CMFLAGS}"
 {% endblock %}
